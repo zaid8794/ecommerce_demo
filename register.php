@@ -22,7 +22,7 @@ if ($_POST) {
         ('$name','$email','$mobile','$gender','$password','$filename')") or die("Error is " . mysqli_error($con));
 
         if ($q) {
-            move_uploaded_file($filepath, "uploads/" . $filename);
+            move_uploaded_file($filepath, "uploads/users/" . $filename);
             echo "<script type='text/javascript'>alert('User Registered Successfully...');window.location='login.php';</script>";
         }
     }
