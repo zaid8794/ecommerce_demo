@@ -14,7 +14,7 @@ if (isset($_POST['add_product'])) {
     $pro_qty = mysqli_real_escape_string($con, $_POST['pro_qty']);
     $is_active = mysqli_real_escape_string($con, $_POST['is_active']);
 
-    $insert_pro_query = mysqli_query($con, "INSERT INTO tbl_product(pro_name, pro_price, pro_details, pro_image, sub_cat_id, pro_qty, is_active, insert_date) VALUES ('$pro_name','$pro_price','$pro_details','$filename','$sub_cat_id','$pro_qty','$is_active',currenttimestamp())");
+    $insert_pro_query = mysqli_query($con, "INSERT INTO tbl_product(pro_name, pro_price, pro_details, pro_image, sub_cat_id, pro_qty, is_active, insert_date) VALUES ('$pro_name','$pro_price','$pro_details','$filename','$sub_cat_id','$pro_qty','$is_active',NOW())");
     if ($insert_pro_query) {
         move_uploaded_file($filepath, "uploads/products/" . $filename);
         echo "<script type='text/javascript'>alert('Product added successfully...');window.location='add_product.php';</script>";

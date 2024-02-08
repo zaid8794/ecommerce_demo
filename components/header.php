@@ -15,6 +15,15 @@
                 if (isset($_SESSION['user'])) {
                 ?>
                     <li class="nav-item">
+                        <a class="nav-link" href="add_product.php">Add Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add_category.php">Add Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add_sub_category.php">Add Sub Category</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="change_password.php">Change Password</a>
                     </li>
                     <li class="nav-item">
