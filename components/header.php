@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-expand-sm bg-primary" data-bs-theme="dark">
     <div class="container">
         <a class="navbar-brand" href="index.php">E-commerce</a>
         <button class="navbar-toggler d-lg-none shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,9 +11,15 @@
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.php">Shop</a>
+                </li>
                 <?php
                 if (isset($_SESSION['user'])) {
                 ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.php">Cart</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="add_product.php">Add Product</a>
                     </li>
@@ -42,12 +48,6 @@
                 }
                 ?>
             </ul>
-            <form class="d-flex my-2 my-lg-0">
-                <input class="form-control me-sm-2 shadow-none" type="text" placeholder="Search" />
-                <button class="btn btn-outline-success my-2 my-sm-0 shadow-none" type="submit">
-                    Search
-                </button>
-            </form>
         </div>
     </div>
 </nav>
